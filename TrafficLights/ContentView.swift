@@ -9,15 +9,12 @@
 import SwiftUI
 
 enum CurrentLight {
-  case red, yellow, green
+  case red, yellow, green, allOff
 }
 
 struct ContentView: View {
   @State private var buttonText = "Start"
-  @State private var redLight = 0.3
-  @State private var yellowLight = 0.3
-  @State private var greenLight = 0.3
-  @State private var currentLight = CurrentLight.green
+  @State private var currentLight = CurrentLight.allOff
   
   var body: some View {
     ZStack {
@@ -25,21 +22,15 @@ struct ContentView: View {
         .edgesIgnoringSafeArea(.all)
       
       VStack {
-        ColorCircle(color: .red, alpha: redLight)
+        ColorCircle(color: .red, alpha: currentLight == .red ? 1.0 : 0.3)
         
-        ColorCircle(color: .yellow, alpha: yellowLight)
+        ColorCircle(color: .yellow, alpha: currentLight == .yellow ? 1.0 : 0.3)
         
-        ColorCircle(color: .green, alpha: greenLight)
+        ColorCircle(color: .green, alpha: currentLight == .green ? 1.0 : 0.3)
         
         Spacer()
         
-        Button(action: { self.changeLight() }) {
-          Text(buttonText)
-            .font(.title)
-        }
-        .frame(width: 200, height: 40)
-        .foregroundColor(.white)
-        .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Color.white, lineWidth: 4))
+        ColorButton(buttonText: buttonText, action: changeLight)
       }
       .padding()
     }
@@ -49,18 +40,10 @@ struct ContentView: View {
     buttonText = "Next"
     
     switch currentLight {
-    case .red:
-      redLight = 0.3
-      yellowLight = 1.0
-      currentLight = .yellow
-    case .yellow:
-      yellowLight = 0.3
-      greenLight = 1.0
-      currentLight = .green
-    case .green:
-      greenLight = 0.3
-      redLight = 1.0
-      currentLight = .red
+    case .red: currentLight = .yellow
+    case .yellow: currentLight = .green
+    case .green: currentLight = .red
+    case .allOff: currentLight = .red
     }
   }
 }

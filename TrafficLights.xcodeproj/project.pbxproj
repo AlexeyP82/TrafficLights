@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D817B01624C8AA6A006FD30B /* ColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D817B01524C8AA6A006FD30B /* ColorButton.swift */; };
 		D884A63A24C765140035880F /* ColorCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D884A63924C765140035880F /* ColorCircle.swift */; };
 		D888000124C6C23200B441EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D888FFFF24C6C23200B441EA /* LaunchScreen.storyboard */; };
 		D888FFF524C6C22D00B441EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D888FFF424C6C22D00B441EA /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D817B01524C8AA6A006FD30B /* ColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButton.swift; sourceTree = "<group>"; };
 		D884A63924C765140035880F /* ColorCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircle.swift; sourceTree = "<group>"; };
 		D888000024C6C23200B441EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D888000224C6C23200B441EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				D888FFF624C6C22D00B441EA /* SceneDelegate.swift */,
 				D888FFF824C6C22D00B441EA /* ContentView.swift */,
 				D884A63924C765140035880F /* ColorCircle.swift */,
+				D817B01524C8AA6A006FD30B /* ColorButton.swift */,
 				D888FFFA24C6C23200B441EA /* Assets.xcassets */,
 				D888FFFF24C6C23200B441EA /* LaunchScreen.storyboard */,
 				D888000224C6C23200B441EA /* Info.plist */,
@@ -151,6 +154,7 @@
 			files = (
 				D888FFF524C6C22D00B441EA /* AppDelegate.swift in Sources */,
 				D884A63A24C765140035880F /* ColorCircle.swift in Sources */,
+				D817B01624C8AA6A006FD30B /* ColorButton.swift in Sources */,
 				D888FFF724C6C22D00B441EA /* SceneDelegate.swift in Sources */,
 				D888FFF924C6C22D00B441EA /* ContentView.swift in Sources */,
 			);
